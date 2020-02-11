@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon180x180.png">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon32x32.png" sizes="32x32">
+
+    <!--Page Title-->
+    <title>Assembly Made Less Difficult</title>
+
+    <!--Bootstrap-->
+    <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+    <!--For Video Player-->
+    <script src="//cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script>
+
+    <!--Custom-->
+    <link href="CSS/Custom.css" rel="stylesheet">
+    <link href="CSS/GlowingText.css" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9d123cb3ff.js"></script>
+
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="CSS/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/slick/slick.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--Font-->
+    <link rel="stylesheet" href="https://use.typekit.net/awe0bpf.css">
+
+</head>
+
+<body class="noSelectText" style="overflow: hidden;">
+    <!-- Flipping box css -->
+    <style>
+        .social-container {
+            position: relative;
+            display: inline-block;
+            width: 164px;
+            height: 36px;
+            perspective: 300px;
+            font-size: 24px;
+            margin: 8px;
+        }
+
+            .social-container .social-cube {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                transform-style: preserve-3d;
+                transition: all 0.333s;
+                transform: translateZ(-18px);
+            }
+
+                .social-container .social-cube .front,
+                .social-container .social-cube .bottom,
+                .social-container .social-cube .back,
+                .social-container .social-cube .top {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    transition: background 0.333s;
+                }
+
+                .social-container .social-cube .front {
+                    transform: rotateX(0deg) translateZ(18px);
+                }
+
+                .social-container .social-cube .bottom {
+                    transform: rotateX(-90deg) translateZ(18px);
+                }
+
+                .social-container .social-cube .back {
+                    transform: rotateX(-180deg) translateZ(18px);
+                }
+
+                .social-container .social-cube .top {
+                    transform: rotateX(-270deg) translateZ(18px);
+                }
+
+            .social-container.twitter .social-cube .front,
+            .social-container.twitter .social-cube .back {
+                background: #2057a8;
+            }
+
+            .social-container.twitter .social-cube .bottom {
+                background: #2057a8;
+            }
+
+            .social-container.twitter .social-cube .top {
+                background: #2057a8;
+            }
+
+            .social-container.twitter:hover .social-cube .bottom {
+                background: #2057a8;
+            }
+
+            .social-container.twitter:hover .social-cube .front {
+                background: #73b4ff;
+            }
+
+            .social-container.twitter:hover .social-cube .top {
+                background: #2057a8;
+            }
+
+            .social-container.social-cube .back {
+                background: #2057a8;
+            }
+
+
+        /* fade in text */
+        @keyframes topFadeOut {
+            0% {
+                top: -10rem;
+                opacity: 0;
+            }
+        }
+
+        .first-text {
+            font-size: 4.4rem;
+            top: 0rem;
+            opacity: 1;
+            animation-name: topFadeOut;
+            animation-duration: 1.4s;
+            color: white;
+        }
+
+        .row
+        {
+            padding:0px;
+            margin:0px;
+        }
+    </style>
+
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+
+    <header style="position:sticky; top:0; z-index:10000;" class="allWhite">
+        <nav style="background:white; padding:10px 0px 10px 0px; z-index:9999;" class="navbar navbar-expand-lg customBorder">
+
+            <div class="dropdown" style="padding-left:1%">
+                <button class="dropbtn"><i style="color:black" class="fas fa-bars fa-2x"></i></button>
+                <div class="dropdown-content">
+                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="/Information.html">Information</a>
+                    <a class="nav-link" href="/CommentTool.html">Comment Tool</a>
+                    <a class="nav-link" href="/StackTracker.html">Stack Tracker</a>
+                    <a class="nav-link" href="/Practice.html">Practice</a>
+                </div>
+            </div>
+
+            <a class="" href="#" style="margin:auto;">
+                <div>
+                    <img class="d-none d-sm-block" style="height:90px; width:410px; margin-right:60px" src="https://assemblyimgs.s3-us-west-2.amazonaws.com/assembly.jpg">
+                    <img class="d-block d-sm-none" style="height:50px; width:227px; margin-right:60px" src="https://assemblyimgs.s3-us-west-2.amazonaws.com/assembly.jpg">
+                </div>
+            </a>
+        </nav>
+    </header>
+    <section>
+        <h1 style="text-align: center">Practice</h1>
+    </section>
+    <!--Footer Start-->
+    <footer class="" style="margin-top:150px; background:white; border-style:solid; border-width: 0px 0px 0px 0px; border-color:#eaeaea;" id="footer">
+        <div class="" style="padding-top:0px; padding-bottom:0px; padding-right:7%; padding-left:7%">
+            <div class="row">
+                <div class="col-md-3 d-none d-sm-block" style="text-align:left; padding-top:30px">
+                    <ul style="list-style:none">
+                        <li>
+                            <a href="/"><img style="height:67px; width:307px; margin-right:60px" src="https://assemblyimgs.s3-us-west-2.amazonaws.com/assembly.jpg"></a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="d-block d-sm-none" href="/"><img style="height:67px; width:307px;" src="https://assemblyimgs.s3-us-west-2.amazonaws.com/assembly.jpg"></a>
+                <div class="col-md-3" style="text-align:left; padding-top:30px;">
+                    <ul style="list-style:none; font-size:16px">
+                        <li>
+                            <div style="font-family: acier-bat-solid,sans-serif; font-size: 30px">Navigation</div>
+                        </li>
+                        <li></li>
+                        <li>
+                            <a href="/index.html" style="font-size:14px;">Home</a>
+                        </li>
+                        <li></li>
+                        <li>
+                            <a href="/Information.html" style="font-size:14px">Information</a>
+                        </li>
+                        <li></li>
+                        <li>
+                            <a href="/CommentTool.html" style="font-size:14px">Comment Tool</a>
+                        </li>
+                        <li></li>
+                        <li>
+                            <a href="/StackTracker.html" style="font-size:14px">Stack Tracker</a>
+                        </li>
+                        <li></li>
+                        <li>
+                            <a href="/Practice.html" style="font-size:14px">Practice</a>
+                        </li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer End-->
+
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+    <!---->
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="CSS/slick/slick.min.js"></script>
+
+    <script>
+        function openUrl(url) {
+            window.location = url;
+        }
+    </script>
+
+    <script>
+        function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+    </script>
+
+    <script>
+        $(window).on("load", function () {
+            $(window).scroll(function () {
+                var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+                $(".customFade").each(function () {
+                    /* Check the location of each desired element */
+                    var objectBottom = $(this).offset().top + ($(this).outerHeight() / 2000);
+
+                    /* If the element is completely within bounds of the window, fade it in */
+                    if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+                        if ($(this).css("opacity") == 0) {
+                            $(this).fadeTo(1000, 1);
+                            $(this).setAttribute("FadedIn", true)
+                        }
+                    }
+                    //else { //object goes out of view (scrolling up)
+                    //    if ($(this).css("opacity") == 1 && $(this).getAttribute("FadedIn") != true) {
+                    //        $(this).fadeTo(1000, 0);
+                    //    }
+                    //}
+                });
+            }).scroll(); //invoke scroll-handler on page-load
+        });
+    </script>
+
+    <script>
+        window.onload = async function(){
+            var letters = document.getElementById("glow").innerText;
+            //alert(letters);
+            var i = 0;
+            var glow = $('.glow' + i);
+            while(i < 31){
+                glow = $('.glow' + i);
+                glow.hasClass('glow') ? glow.removeClass('glow') : glow.addClass('glow');
+                i++;
+                await sleep(100);
+            }
+        }
+
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+    </script>
+
+    <script>
+        window.setInterval(function () {
+            var globe = document.getElementById("drawing");
+            var rocketBackground = document.getElementById("rocketBackground");
+            var rocket = document.getElementById("rocket");
+            if ($(window).width() > 575) {
+                globe.style.marginLeft = (globe.clientWidth / 2) - (rocketBackground.clientWidth * .3) + "px";
+            } else {
+                var imageWrapper = document.getElementById("wrapper");
+                imageWrapper.style.width = $(window).width();
+                imageWrapper.style.overflow = "hidden";
+                //globe.style.marginLeft = (window.innerWidth / 2) - (rocketBackground.clientWidth * .105) + "px";
+            }
+
+        }, 1000)
+    </script>
+
+    <script>
+        $('.testimonials').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+
+            autoplay: true,
+            autoplaySpeed: 3000,
+            focusOnSelect: true,
+            centerMode: true,
+            centerPadding: '40px',
+            dots: true,
+            arrows: false,
+        });
+    </script>
+
+    <script>
+        function ShowWhy(id) {
+            var element = document.getElementById(id);
+            var element2 = document.getElementById(id + 'Icon');
+            element2.setAttribute("style", "display:none");
+
+            var op = 0.1;  // initial opacity
+            element.style.opacity = '0'
+            element.style.display = 'block';
+            var timer = setInterval(function () {
+                if (op >= 1) {
+                    clearInterval(timer);
+                }
+                element.style.opacity = op;
+                element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+                op += op * 0.1;
+            }, 20);
+        }
+    </script>
+
+    <script>
+        function HideWhy(id) {
+            var element = document.getElementById(id);
+            var element2 = document.getElementById(id + 'Icon');
+            element.setAttribute("style", "display:none");
+            element2.setAttribute("style", "display:");
+        }
+    </script>
+
+    <script>
+        function allWhite(id) {
+            var element1 = document.getElementById(id + '1');
+            var element2 = document.getElementById(id + '2');
+            var element3 = document.getElementById(id + '3');
+            var element4 = document.getElementById(id + '4');
+            var element5 = document.getElementById(id + '5');
+            var element6 = document.getElementById(id + '6');
+            var element7 = document.getElementById(id + '7');
+
+            element1.style.color = "white";
+            element2.style.color = "white";
+            element3.style.color = "white";
+            element4.style.color = "white";
+            element5.style.color = "white";
+            element6.style.color = "white";
+            element7.style.color = "white";
+            element7.style.borderColor = "white";
+        }
+    </script>
+
+    <script>
+        function notWhite(id) {
+            var element1 = document.getElementById(id + '1');
+            var element2 = document.getElementById(id + '2');
+            var element3 = document.getElementById(id + '3');
+            var element4 = document.getElementById(id + '4');
+            var element5 = document.getElementById(id + '5');
+            var element6 = document.getElementById(id + '6');
+            var element7 = document.getElementById(id + '7');
+
+            element1.style.color = "#2057a8";
+            element2.style.color = "black";
+            element3.style.color = "black";
+            element4.style.color = "black";
+            element5.style.color = "black";
+            element6.style.color = "#2057a8";
+            element7.style.color = "#2057a8";
+            element7.style.borderColor = "#2057a8";
+        }
+    </script>
+
+    <script>
+        function showFaq(id) {
+            var element = document.getElementById(id);
+            element.style.display = "";
+        }
+    </script>
+
+    <script>
+        function hideFaq(id) {
+            var element = document.getElementById(id);
+            element.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
