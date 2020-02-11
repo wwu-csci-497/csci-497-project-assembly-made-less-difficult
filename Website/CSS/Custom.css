@@ -1,0 +1,559 @@
+﻿.noSelectText {
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+/*Common Breakpoints Start*/
+@media (min-width: 1200px){
+
+}
+/*Common Breakpoints End*/
+
+@media (min-width: 375px){
+    .customPaddingTestimonial{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media (max-width: 375px){
+    .customPaddingTestimonial{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.customVarient {
+    cursor: pointer;
+    text-align:center;
+    border-style: solid;
+    border-width: 1px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 20px 10px 20px;
+}
+
+.customProductCheckoutButton{
+    font-size: 30px;
+    background-color: #f7961f;
+    padding: 20px 0px 20px 0px;
+    color: white
+}
+
+.customProductBottom {
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    padding: 20px 0px 20px 0px;
+}
+
+.customBottom {
+    background-image: url("https://tropicaimgs.s3.us-east-2.amazonaws.com/Bottom.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+    top:400px
+}
+
+.customFont{
+    font-family: acier-bat-solid,sans-serif; 
+}
+
+.customTitle{
+    font-family: acier-bat-solid,sans-serif; 
+    font-size: 50px; 
+    text-align: center; 
+    padding-top:150px;
+}
+
+.customFooterTitle{
+    font-family: acier-bat-solid,sans-serif; 
+    font-size: 30px; 
+    text-align: center; 
+    padding-top:30px;
+}
+
+.topRight{
+    position: absolute;
+    top:110px;
+    right:0px;
+}
+
+.topRightPhone{
+    position: absolute;
+    top:30px;
+    right:0px;
+}
+
+.topLeft{
+    position: absolute;
+    top:110px;
+    left:0px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+@media (min-width: 375px){
+    .customButtonProduct {
+        transform: skew(-20deg);
+        width:300px;
+        /*border-radius: 40px;*/
+        border-style:solid;
+        border-width: 4px;
+        border-color: black;
+        font-family: acier-bat-outline,sans-serif;
+        font-size: 44px;
+        color: black;
+        padding: 0px 0px 0px 0px;
+
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+    }
+
+        .customButtonProduct:hover {
+            top: 20px;
+            color: #fcbd10;
+            border-color: #fcbd10;
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+        }
+}
+
+@media (max-width: 375px){
+    .customButtonProduct {
+        transform: skew(-20deg);
+        width:280px;
+        /*border-radius: 40px;*/
+        border-style:solid;
+        border-width: 4px;
+        border-color: black;
+        font-family: acier-bat-outline,sans-serif;
+        font-size: 44px;
+        color: black;
+        padding: 0px 0px 0px 0px;
+
+        -webkit-transition-duration: 0.2s;
+        transition-duration: 0.2s;
+        -webkit-transition-property: transform;
+        transition-property: transform;
+    }
+
+        .customButtonProduct:hover {
+            top: 20px;
+            color: #fcbd10;
+            border-color: #fcbd10;
+            -webkit-transform: translateY(-8px);
+            transform: translateY(-8px);
+        }
+}
+
+.img-hover-zoom {
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+.img-hover-zoom--brightness img {
+    transition: transform 3s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(100%);
+}
+    
+    /* The Transformation */
+    .img-hover-zoom--brightness:hover img {
+        filter: brightness(105%);
+        transform: scale(1.2);
+    }
+
+.img-hover-zoom--brightness2 img {
+    transition: transform .5s, filter 1.5s ease-in-out;
+    transform-origin: center center;
+    filter: brightness(100%);
+}
+    
+    /* The Transformation */
+    .img-hover-zoom--brightness2:hover img {
+        filter: brightness(110%);
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+.allWhite * {
+    color: white;
+}
+
+.navBarElement {
+    margin: 25px
+}
+
+.customFade {
+    margin: 0px;
+    padding: 0px;
+    opacity: 0;
+}
+
+.customBg1 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackground.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size:cover;
+
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 34%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 34%, 0 100%);
+    z-index: -9999;
+}
+
+.customBg3 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackground2.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.customBg4 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackground4.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.customBg5 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackground5.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.customBg6 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackground6.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.customBg7 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/Pricing.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.customBg8 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackgroundBlob.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.customBg9 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackgroundBlob2.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: cover;
+}
+
+.customPricingTitle {
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+    .customPricingTitle:hover {
+        transition: all 500ms;
+        font-size: 40px;
+        font-size-adjust: 20;
+        color: white;
+        background: #2057a8;
+    }
+
+
+.customTitleSection {
+    padding-top: 100px;
+    padding-bottom: 350px
+}
+
+.customButtonTitle {
+    background-image: url("https://tropicaimgs.s3.us-east-2.amazonaws.com/ProductsButton.png");
+    background-size: cover;
+    background-position: left bottom;
+    transform: skew(-20deg);
+    /*border-radius: 40px;*/
+    border-width: 4px;
+    border-color: white;
+    font-family: acier-bat-outline,sans-serif;
+    font-size: 44px;
+    color: white;
+    padding: 0px 0px 0px 0px;
+
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+    .customButtonTitle:hover {
+        top: 20px;
+        color: white;
+        border-color: white;
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+.customButtonStudies {
+    background-image: url("https://tropicaimgs.s3.us-east-2.amazonaws.com/ProductsButtonBlue.png");
+    background-size: cover;
+    background-position: left bottom;
+    transform: skew(-20deg);
+    /*border-radius: 40px;*/
+    border-width: 4px;
+    border-color: white;
+    font-family: acier-bat-solid,sans-serif;
+    font-size: 44px;
+    color: white;
+    padding: 0px 0px 0px 0px;
+
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+    .customButtonStudies:hover {
+        top: 20px;
+        color: white;
+        border-color: white;
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+@media (max-width:575px) {
+    .customHowItWorks {
+        margin-top: -20px;
+    }
+}
+@media (min-width: 575px) {
+    .customHowItWorks {
+        margin-top: 200px;
+    }
+}
+
+.customWrapper img canvas {
+    object-fit: contain;
+}
+
+.customPricingBackground:hover {
+    
+    background-image: url("https://dropshipimages.s3.amazonaws.com/HomeBackgroundPricingAnimation.png");
+    background-repeat: repeat-x;
+    /*background-position: right top;*/
+    background-size: cover;
+    position: relative;
+    animation: customMovingBackground 15s linear infinite;
+}
+
+@keyframes customMovingBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.customRotation{
+    transform: rotate(-35deg);
+}
+
+.customButton1 {
+    background-image: url("https://dropshipimages.s3.amazonaws.com/ButtonBackground.png");
+    background-size: cover;
+    background-position: right bottom;
+    border-radius: 40px;
+    border-width:1px;
+    border-color:#eaeaea;
+    font-size: 24px;
+    color: white;
+    padding: 5px 25px 8px 25px;
+    -webkit-transition-duration: 0.2s;
+    transition-duration: 0.2s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+    .customButton1:hover {
+        font-size: 24px;
+        color: white;
+        -webkit-transform: translateY(-8px);
+        transform: translateY(-8px);
+    }
+
+.customButton2 {
+    border-radius: 40px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 24px;
+    color: white;
+    padding: 5px 15px 8px 15px;
+}
+
+    .customButton2:hover {
+        border-radius: 40px;
+        border-width: 3px;
+        border-color: white;
+        font-size: 24px;
+        color: black;
+        background: white
+    }
+
+.customButton3 {
+    border-radius: 40px;
+    border-width: 3px;
+    border-color: white;
+    font-size: 24px;
+    color: white;
+    padding: 5px 15px 8px 15px;
+}
+
+    .customButton3:hover {
+        border-radius: 40px;
+        border-width: 3px;
+        border-color: white;
+        font-size: 24px;
+        color: white;
+        background: #2057a8
+    }
+
+.customOurPromise {
+    background-image: url("https://tropicaimgs.s3.us-east-2.amazonaws.com/OurPromise.png");
+    color: white;
+    border-radius: 100%;
+    width:105px;
+    height:105px;
+    /*border-style: solid;
+    border-color: #2057a8;*/
+    padding: 30px;
+}
+
+.customFeatureIcon {
+    color: white;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: white;
+    padding: 30px;
+}
+
+    .customFeatureIcon:hover {
+        color: black;
+        background: white;
+    }
+
+.customWhyIcon {
+    color: white;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: white;
+    padding: 30px 50px 30px 50px;
+}
+
+    .customWhyIcon:hover{
+        color: black;
+        background: #2057a8;
+    }
+
+.customTestimonialIMG {
+    position: relative;
+    margin: auto;
+    top: -120px;
+    border-radius: 100%;
+    width: 175px;
+    height: 175px;
+    border-style: solid;
+    border-color: #2057a8;
+}
+
+.customTestimonialBody {
+    color: black;
+    position: relative;
+    top:-100px;
+}
+
+.customTestimonial {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-color: #2057a8;
+    padding: 30px 30px 0px 30px;
+}
+
+.customBorder {
+    border-width: 0px 0px 0px 0px;
+    border-color: #eaeaea;
+    border-style: solid;
+}
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropbtn2 {
+    background-color: #2057a8;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn .dropbtn2 {
+    background-color: #ddd;
+}
+
+.slick-prev:before {
+    color: black;
+}
+
+.slick-next:before {
+    color: black;
+}

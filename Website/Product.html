@@ -1,0 +1,489 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!--Favicon-->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="57x57" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon180x180.png">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://tropicaimgs.s3.us-east-2.amazonaws.com/Favicons/favicon32x32.png" sizes="32x32">
+
+    <!--Page Title-->
+    <title>Tropica Organics</title>
+
+    <!--Bootstrap-->
+    <link href="CSS/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+
+    <!--For Video Player-->
+    <script src="//cdn.jsdelivr.net/npm/afterglowplayer@1.x"></script>
+
+    <!--Custom-->
+    <link href="CSS/Custom.css" rel="stylesheet">
+
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/9d123cb3ff.js"></script>
+
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="CSS/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/slick/slick.css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!--Font-->
+    <link rel="stylesheet" href="https://use.typekit.net/awe0bpf.css">
+
+    <!--JQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="noSelectText" onload="loadProduct();">
+    <header style="position:sticky; top:0; z-index:10000;" class="allWhite">
+        <nav style="background:white; padding:10px 0px 10px 0px; z-index:9999;" class="navbar navbar-expand-lg customBorder">
+
+            <div class="dropdown" style="padding-left:1%">
+                <button class="dropbtn"><i style="color:black" class="fas fa-bars fa-2x"></i></button>
+                <div class="dropdown-content">
+                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link" href="">Products</a>
+                </div>
+            </div>
+
+            <a class="" href="/" style="margin:auto;">
+                <div>
+                    <img class="d-none d-sm-block" style="height:90px; width:410px; margin-right:60px" src="https://tropicaimgs.s3.us-east-2.amazonaws.com/Logo3.png">
+                    <img class="d-block d-sm-none" style="height:50px; width:227px; margin-right:60px" src="https://tropicaimgs.s3.us-east-2.amazonaws.com/Logo3.png">
+                </div>
+            </a>
+
+            <!--<a class="btn customButton1" href="">Sign Up For Just $1</a>-->
+
+        </nav>
+    </header>
+
+    <!--Top of Page Start-->
+    <section id="intro" class="">
+        <div style="padding-top:0px; padding-bottom:50px" class="container">
+            <h1 id="PageName" class="customTitle"></h1>
+            <div class="row">
+                <div class="col-md-7">
+                    <div style="text-align:center">
+                        <img id="mainProductImage" class="pointer" width="330" src="">
+                        <div id="VarientImages">
+                            <!--ImageThumbNails-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="customProductBottom customFont" id="SelectedProduct" style="font-size: 30px"></div>
+                    <div class="customProductBottom customFont" style="font-size: 30px">
+                        <span id="ActualPrice">Actual</span>
+                        <span id="SalePrice" style="text-decoration: line-through; color:#f7961f">Sale</span>
+                    </div>
+                    <div id="Varients" class="customProductBottom customFont d-flex" style="font-size: 20px">
+
+                    </div>
+                    <div id="Quantity" class="customProductBottom customFont" style="font-size: 30px">
+                        <span style="cursor: pointer; border-style: solid; border-width: 1px; padding: 10px 10px 10px 10px;" onclick='minus()'>-</span>
+                        <span style="cursor: pointer; border-style: solid; border-width: 1px; padding: 10px 10px 10px 10px;" id="QuantityValue">0</span>
+                        <span style="cursor: pointer; border-style: solid; border-width: 1px; padding: 10px 10px 10px 10px;" onclick="plus()">+</span>
+                    </div>
+                    <div style="text-align:center">
+                        <div class="customProductCheckoutButton pointer" style="font-family: acier-bat-outline,sans-serif; text-align: center; margin-top:20px; margin-left: 20px"><b>Add To Cart</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Top of Page End-->
+    <!--Footer Start-->
+    <footer class="" style="margin-top:150px; background:white; border-style:solid; border-width: 0px 0px 0px 0px; border-color:#eaeaea;" id="footer">
+            <div class="" style="padding-top:0px; padding-bottom:0px; padding-right:7%; padding-left:7%">
+                <div class="row">
+                    <div class="col-md-3 d-none d-sm-block" style="text-align:left; padding-top:30px">
+                        <ul style="list-style:none">
+                            <li>
+                                <a href="/"><img style="height:67px; width:307px; margin-right:60px" src="https://tropicaimgs.s3.us-east-2.amazonaws.com/Logo3.png"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="d-block d-sm-none" href="/"><img style="height:67px; width:307px;" src="https://tropicaimgs.s3.us-east-2.amazonaws.com/Logo3.png"></a>
+                    <div class="col-md-3" style="text-align:left; padding-top:30px;">
+                        <ul style="list-style:none; font-size:16px">
+                            <li>
+                                <div style="font-family: acier-bat-solid,sans-serif; font-size: 30px">Navigation</div>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="/" style="font-size:14px;">Home</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3" style="text-align:left; padding-top:30px;">
+                        <ul style="list-style:none; font-size:16px">
+                            <li>
+                                <div style="font-family: acier-bat-solid,sans-serif; font-size: 30px">Buy</div>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="Product.html?prod=Tinctures" style="font-size:14px">Tinctures</a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li>
+                                <a href="Product.html?prod=SoftGels" style="font-size:14px">Soft Gels</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="Product.html?prod=FaceMasks" style="font-size:14px">Face Masks</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="Product.html?prod=ForPets" style="font-size:14px">For Pets</a>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3" style="text-align:left; padding-top:30px;">
+                        <ul style="list-style:none; font-size:16px">
+                            <li>
+                                <div style="font-family: acier-bat-solid,sans-serif; font-size: 30px">Legal</div>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="/LabResults.html" style="font-size:14px">Lab Results</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="/Privacy.html" style="font-size:14px">Privacy Policy</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="/TAC.html" style="font-size:14px">Terms & Conditions</a>
+                            </li>
+                            <li></li>
+                            <li>
+                                <a href="/Refund.html" style="font-size:14px">Refunds and Returns</a>
+                            </li>
+                            <li></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="customFooterTitle">FOOD AND DRUG ADMINISTRATION (FDA) DISCLOSURE</div>
+                    <div style="text-align: center; padding-bottom:20px; font-size: 12px">
+                        This product is not for use by or sale to persons under the age of 18. This product should be used only as directed on the label. It should not be used if you are pregnant or nursing. 
+                        Consult with a physician before use if you have a serious medical condition or use prescription medications. A Doctor’s advice should be sought before using this and any supplemental 
+                        dietary product. All trademarks and copyrights are property of their respective owners and not affiliated with nor do they endorse this product. These statements have not been evaluated 
+                        by the FDA. This product is not intended to diagnose, treat, cure or prevent any disease. By using this site you agree to follow the Privacy Policy and all Terms & Conditions printed 
+                        on this site. Void Where Prohibited By Law.
+                        </br>
+                        </br>
+                        &copy; tropicaorganics.com
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!--Footer End-->
+    <script>
+        ////Urls
+        //api
+        var orangeUrl = "https://3qmjeed1wc.execute-api.us-west-2.amazonaws.com/Prod/api/products/Tincture_Orange_450";
+        var mintUrl = "https://3qmjeed1wc.execute-api.us-west-2.amazonaws.com/Prod/api/products/Tincture_Mint_450";
+        var dogTreatUrl = "https://3qmjeed1wc.execute-api.us-west-2.amazonaws.com/Prod/api/products/DogTreats_Beef_2";
+        var faceMaskUrl = "https://3qmjeed1wc.execute-api.us-west-2.amazonaws.com/Prod/api/products/FaceMask_None_10";
+        var softGelUrl = "https://3qmjeed1wc.execute-api.us-west-2.amazonaws.com/Prod/api/products/SoftGels_EveryDayFormula_10";
+
+        ////Image Urls
+        //Tinctures
+        var orangeImageUrl = "https://tropicaimgs.s3.us-east-2.amazonaws.com/Prod/Prod_TinctureOrange450.png";
+        var mintImageUrl = "https://tropicaimgs.s3.us-east-2.amazonaws.com/Prod/Prod_TinctureMint450.png";
+        //For Pets
+        var dogTreatImageUrl = "https://tropicaimgs.s3.us-east-2.amazonaws.com/Prod/Prod_DogChews.png";
+        //Face Masks
+        var faceMaskImageUrl = "https://tropicaimgs.s3.us-east-2.amazonaws.com/Prod/Prod_FaceMask.png";
+        //Soft Gels
+        var softGelImageUrl = "https://tropicaimgs.s3.us-east-2.amazonaws.com/Prod/Prod_SoftGel.png";
+
+        ////DisplayNames
+        //Tinctures
+        var orangeDisplayName = "Citrus Orange Tincture 450mg";
+        var mintDisplayName = "Mint Tincture 450mg";
+        //For Pets
+        var dogTreatDisplayName = "Beef Dog Treats 2mg (per chew)";
+        //Face Masks
+        var faceMaskDisplayName = "Premium CBD Extract Face Mask";
+        //Soft Gels
+        var softGelDisplayName = "Premium CBD Soft Gels";
+
+        //Globals
+        var selectedProduct;
+        var actualPrice;
+        var salePrice;
+        var name;
+        var flavor;
+        var size;
+        var inventory;
+        var description;
+
+        function loadProduct() {
+            var url = window.location.href;
+            var variable = url.split('?')[1];
+            var prod = variable.split('=')[1];
+
+            if (prod == "ForPets") {
+                forPetsPage();
+            } else if (prod == "FaceMasks") {
+                faceMasksPage();
+            } else if (prod == "SoftGels") {
+                softGelsPage();
+            } else {
+                tincturesPage();
+            }
+        }
+
+        ////SoftGels
+        function softGelsPage() {
+            //Page Name
+            document.getElementById("PageName").innerText = "Soft Gels";
+
+            //mainProductImage
+            setNewProductInfo(softGelImageUrl, softGelDisplayName, softGelUrl);
+
+            ////VarientImages
+            //softGel
+            var softGelImg = document.createElement('img');
+            softGelImg.id = 'softGel';
+            softGelImg.src = softGelImageUrl;
+            softGelImg.width = '110';
+            softGelImg.height = '173';
+            softGelImg.style.margin = '0px 10px 0px 10px';
+            softGelImg.addEventListener("click",
+                function () { setNewProductInfo(softGelImageUrl, softGelDisplayName, softGelUrl); },
+                false);
+          
+            //Add divs
+            document.getElementById("VarientImages").appendChild(softGelImg);
+
+            ////Varients
+            //dogTreat
+            var softGelVarient = document.createElement('div');
+            softGelVarient.classList.add("customVarient");
+            softGelVarient.innerText = "Soft Gel 10mg";
+            softGelVarient.addEventListener("click",
+                function () { setNewProductInfo(softGelImageUrl, softGelDisplayName, softGelUrl); },
+                false);
+
+            //Add divs
+            document.getElementById("Varients").appendChild(softGelVarient);
+        }
+
+        ////FaceMasks
+        function faceMasksPage() {
+            //Page Name
+            document.getElementById("PageName").innerText = "Face Masks";
+
+            //mainProductImage
+            setNewProductInfo(faceMaskImageUrl, faceMaskDisplayName, faceMaskUrl);
+
+            ////VarientImages
+            //face mask
+            var faceMaskImg = document.createElement('img');
+            faceMaskImg.id = 'faceMask';
+            faceMaskImg.src = faceMaskImageUrl;
+            faceMaskImg.width = '110';
+            faceMaskImg.height = '173';
+            faceMaskImg.style.margin = '0px 10px 0px 10px';
+            faceMaskImg.addEventListener("click",
+                function () { setNewProductInfo(faceMaskImageUrl, faceMaskDisplayName, faceMaskUrl); },
+                false);
+          
+            //Add divs
+            document.getElementById("VarientImages").appendChild(faceMaskImg);
+
+            ////Varients
+            //face mask
+            var faceMaskVarient = document.createElement('div');
+            faceMaskVarient.classList.add("customVarient");
+            faceMaskVarient.innerText = "Face Mask 10mg";
+            faceMaskVarient.addEventListener("click",
+                function () { setNewProductInfo(faceMaskImageUrl, faceMaskDisplayName, faceMaskUrl); },
+                false);
+
+            //Add divs
+            document.getElementById("Varients").appendChild(faceMaskVarient);
+        }
+
+        //////ForPets
+        function forPetsPage() {
+            //Page Name
+            document.getElementById("PageName").innerText = "For Pets";
+
+            //mainProductImage
+            setNewProductInfo(dogTreatImageUrl, dogTreatDisplayName, dogTreatUrl);
+
+            ////VarientImages
+            //dogTreat
+            var dogTreatImg = document.createElement('img');
+            dogTreatImg.id = 'dogTreat';
+            dogTreatImg.src = dogTreatImageUrl;
+            dogTreatImg.width = '110';
+            dogTreatImg.height = '173';
+            dogTreatImg.style.margin = '0px 10px 0px 10px';
+            dogTreatImg.addEventListener("click",
+                function () { setNewProductInfo(dogTreatImageUrl, dogTreatDisplayName, dogTreatUrl); },
+                false);
+          
+            //Add divs
+            document.getElementById("VarientImages").appendChild(dogTreatImg);
+
+            ////Varients
+            //dogTreat
+            var dogTreatVarient = document.createElement('div');
+            dogTreatVarient.classList.add("customVarient");
+            dogTreatVarient.innerText = "Beef Dog Treat";
+            dogTreatVarient.addEventListener("click",
+                function () { setNewProductInfo(dogTreatImageUrl, dogTreatDisplayName, dogTreatUrl); },
+                false);
+
+            //Add divs
+            document.getElementById("Varients").appendChild(dogTreatVarient);
+        }
+
+        //////Tinctures
+        function tincturesPage() {
+            //Page Name
+            document.getElementById("PageName").innerText = "Tinctures";
+
+            //mainProductImage
+            setNewProductInfo(orangeImageUrl, orangeDisplayName, orangeUrl);
+
+            ////VarientImages
+            //Orange
+            var orange450Img = document.createElement('img');
+            orange450Img.id = 'Orange';
+            orange450Img.src = orangeImageUrl;
+            orange450Img.width = '110';
+            orange450Img.height = '173';
+            orange450Img.style.margin = '0px 10px 0px 10px';
+            orange450Img.addEventListener("click",
+                function () { setNewProductInfo(orangeImageUrl, orangeDisplayName, orangeUrl); },
+                false);
+
+            //Mint
+            var mint450Img = document.createElement('img');
+            mint450Img.id = 'Mint';
+            mint450Img.src = mintImageUrl;
+            mint450Img.width = '110';
+            mint450Img.height = '173';
+            mint450Img.style.margin = '0px 10px 0px 10px';
+            mint450Img.addEventListener("click",
+                function () { setNewProductInfo(mintImageUrl, mintDisplayName, mintUrl); },
+                false);
+                
+            //Add divs
+            document.getElementById("VarientImages").appendChild(orange450Img);
+            document.getElementById("VarientImages").appendChild(mint450Img);
+
+            ////Varients
+            //Orange
+            var orangeVarient = document.createElement('div');
+            orangeVarient.classList.add("customVarient");
+            orangeVarient.innerText = "Citrus Orange 450mg";
+            orangeVarient.addEventListener("click",
+                function () { setNewProductInfo(orangeImageUrl, orangeDisplayName, orangeUrl); },
+                false);
+
+            //Mint
+            var mintVarient = document.createElement('div');
+            mintVarient.classList.add("customVarient");
+            mintVarient.innerText = "Mint 450mg";
+            mintVarient.addEventListener("click",
+                function () { setNewProductInfo(mintImageUrl, mintDisplayName, mintUrl); },
+                false);
+
+            //Add divs
+            document.getElementById("Varients").appendChild(orangeVarient);
+            document.getElementById("Varients").appendChild(mintVarient);
+        }
+
+        function setCurrentProduct(productName) {
+            document.getElementById("SelectedProduct").innerText = productName;
+        }
+
+        function setNewProductInfo(imgUrl, newDisplayName, apiUrl) {
+            var mainProductImage = document.getElementById('mainProductImage');
+            mainProductImage.src = imgUrl;
+            setCurrentProduct(newDisplayName);
+
+            fetch(apiUrl)
+            .then(res => res.json())
+                .then((out) => {
+                    actualPrice = out.actualPrice;
+                    salePrice = out.salePrice;
+                    name = out.name;
+                    flavor = out.flavor;
+                    size = out.size;
+                    inventory = out.inventory;
+                    description = out.description;
+
+                    ////ActualPrice
+                    document.getElementById("ActualPrice").innerText = "$" + actualPrice;
+
+                    ////SalePrice
+                    document.getElementById("SalePrice").innerText = "$" + salePrice;
+
+                    ////Quantity
+                    var quantity = parseInt(document.getElementById("QuantityValue").innerText, 10);
+                    if (quantity > inventory) {
+                        document.getElementById("QuantityValue").innerText = inventory;
+                    }
+                })
+                .catch(err => { throw err });
+        }
+
+        function plus() {
+            var QuantityValue = parseInt(document.getElementById("QuantityValue").innerText, 10);
+            
+            //Check for if there is available inventory
+            if(QuantityValue < inventory){
+                QuantityValue += 1;
+            }
+
+            document.getElementById("QuantityValue").innerText = QuantityValue;
+            $("#QuantityValue").load();
+        }
+
+        function minus() {
+            var QuantityValue = parseInt(document.getElementById("QuantityValue").innerText, 10);
+            
+            //Check greater than 0
+            if(QuantityValue > 0){
+                QuantityValue -= 1;
+            }
+
+            document.getElementById("QuantityValue").innerText = QuantityValue;
+            $("#QuantityValue").load();
+        }
+    </script>
+
+</body>
+
+</html>

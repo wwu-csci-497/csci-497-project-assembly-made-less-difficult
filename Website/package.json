@@ -1,0 +1,9 @@
+{
+  "name": "dswebsite",
+  "version": "0.0.0",
+  "description": "DSwebsite",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
