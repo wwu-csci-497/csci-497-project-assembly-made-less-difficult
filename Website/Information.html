@@ -211,7 +211,149 @@
     <section class="container">
         <h1 style="text-align: center">Information</h1>
         <div style="text-align: center; margin-top:40px">
-            <h1>Common Terms & Their Meaning (8086/8088 instruction set of Intel)</h1>
+                <h1>Accessible Registers x64</h1>
+                <table style="width:100%">
+                    <tr>
+                        <th>8-byte</th>
+                        <th>4-byte (0-3)</th>
+                        <th>2-byte (0-1)</th>
+                        <th>1-byte (0)</th>
+                    </tr>
+                    <tr>
+                        <td>%rax</td>
+                        <td>%eax</td>
+                        <td>%ax</td>
+                        <td>%al</td>
+                    </tr>
+                    <tr>
+                        <td>%rcx</td>
+                        <td>%ecx</td>
+                        <td>%cx</td>
+                        <td>%cl</td>
+                    </tr>
+                    <tr>
+                        <td>%rdx</td>
+                        <td>%edx</td>
+                        <td>%dx</td>
+                        <td>%dl</td>
+                    </tr>
+                    <tr>
+                        <td>%rbx</td>
+                        <td>%ebx</td>
+                        <td>%bx</td>
+                        <td>%bl</td>
+                    </tr>
+                    <tr>
+                        <td>%rsi</td>
+                        <td>%esi</td>
+                        <td>%si</td>
+                        <td>%sil</td>
+                    </tr>
+                    <tr>
+                        <td>%rdi</td>
+                        <td>%edi</td>
+                        <td>%di</td>
+                        <td>%dil</td>
+                    </tr>
+                    <tr>
+                        <td>%rsp</td>
+                        <td>%esp</td>
+                        <td>%sp</td>
+                        <td>%spl</td>
+                    </tr>
+                    <tr>
+                        <td>%rbp</td>
+                        <td>%ebp</td>
+                        <td>%bp</td>
+                        <td>%bpl</td>
+                    </tr>
+                    <tr>
+                        <td>%r8</td>
+                        <td>%r8d</td>
+                        <td>%r8w</td>
+                        <td>%r8b</td>
+                    </tr>
+                    <tr>
+                        <td>%r9</td>
+                        <td>%r9d</td>
+                        <td>%r9w</td>
+                        <td>%r9b</td>
+                    </tr>
+                    <tr>
+                        <td>%r10</td>
+                        <td>%r10d</td>
+                        <td>%r10w</td>
+                        <td>%r10b</td>
+                    </tr>
+                    <tr>
+                        <td>%r11</td>
+                        <td>%r11d</td>
+                        <td>%r11w</td>
+                        <td>%r11b</td>
+                    </tr>
+                    <tr>
+                        <td>%r12</td>
+                        <td>%r12d</td>
+                        <td>%r12w</td>
+                        <td>%r12b</td>
+                    </tr>
+                    <tr>
+                        <td>%r13</td>
+                        <td>%r13d</td>
+                        <td>%r13w</td>
+                        <td>%r13b</td>
+                    </tr>
+                    <tr>
+                        <td>%r14</td>
+                        <td>%r14d</td>
+                        <td>%r14w</td>
+                        <td>%r14b</td>
+                    </tr>
+                    <tr>
+                        <td>%r15</td>
+                        <td>%r15d</td>
+                        <td>%r15w</td>
+                        <td>%r15b</td>
+                    </tr>
+                  </table>
+            </div>
+        <div style="text-align: center; margin-top:40px">
+            <h1>Sizing Conventions</h1>
+            <table style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Processor</th>
+                    <th>Size</th>
+                </tr>
+                <tr>
+                    <td>byte</td>
+                    <td>x64</td>
+                    <td>8 bits</td>
+                </tr>
+                <tr>
+                    <td>word</td>
+                    <td>x64</td>
+                    <td>16 bits</td>
+                </tr>
+                <tr>
+                    <td>double word</td>
+                    <td>x64</td>
+                    <td>32 bits</td>
+                </tr>
+                <tr>
+                    <td>quadword</td>
+                    <td>x64</td>
+                    <td>64 bits</td>
+                </tr>
+                <tr>
+                    <td>double quadword</td>
+                    <td>x64</td>
+                    <td>128 bits</td>
+                </tr>
+              </table>
+        </div>
+        <div style="text-align: center; margin-top:40px">
+            <h1>Common Instructions & Their Meaning (8086/8088 instruction set of Intel)</h1>
             <table style="width:100%">
                 <tr>
                   <th>Instruction</th>
@@ -223,6 +365,78 @@
                   <td>mov</td>
                   <td>mov ebx, 110</td>
                   <td>ebx = 110, Assigns Register ebx the Value 110</td>
+                </tr>
+                <!--CMP-->
+                <tr>
+                  <td>cmp</td>
+                  <td>cmp eax, 60</td>
+                  <td>60 - eax, this result is stored in a special register that is used for jump conditions</td>
+                </tr>
+                <!--JMP-->
+                <tr>
+                  <td>jmp label</td>
+                  <td>jmp .section_two</td>
+                  <td>Start reading code from the labeled section .section_two</td>
+                </tr>
+                <!--JE / JZ-->
+                <tr>
+                  <td>je / jz</td>
+                  <td>je .section_two / jz .section_two</td>
+                  <td>Jump to .section_two if equal / jump to section_two if 0</td>
+                </tr>
+                <!--JNE / JNZ-->
+                <tr>
+                  <td>jne / jnz</td>
+                  <td>jne .section_two / jnz .section_two</td>
+                  <td>Jump to .section_two if not equal / jump to .section_two if not 0</td>
+                </tr>
+                <!--JS-->
+                <tr>
+                  <td>js</td>
+                  <td>js .section_two</td>
+                  <td>Jump to .section_two if less than 0</td>
+                </tr>
+                <!--JNS-->
+                <tr>
+                  <td>jns</td>
+                  <td>jns .section_two</td>
+                  <td>Jump to .section_two if not less than 0</td>
+                </tr>
+                <!--JG / JNLE-->
+                <tr>
+                  <td>jg / jnle</td>
+                  <td>jg .section_two / jnle .section_two</td>
+                  <td>Jump to .section_two if greater than 0 / Jump to .section_two if not less than or equal to 0</td>
+                </tr>
+                <!--JGE / JNL-->
+                <tr>
+                  <td>jge / jnl</td>
+                  <td>jge .section_two / jnl .section_two</td>
+                  <td>Jump to .section_two if greater than 0 or equal to 0 / Jumpt to .section_two if not less than 0</td>
+                </tr>
+                <!--JL / JNGE-->
+                <tr>
+                  <td>jl / jnge</td>
+                  <td>jl .section_two / jnge .section_two</td>
+                  <td>Jump to .section_two if less than 0 / Jump to .section_two if not greater than 0 and not equal to 0</td>
+                </tr>
+                <!--JLE / JNG-->
+                <tr>
+                  <td>jle / jng</td>
+                  <td>jle .section_two / jng .section_two</td>
+                  <td>Jump to .section_two if less or equal to 0 / jump to .section_two if not greater than 0</td>
+                </tr>
+                <!--CMOVE / CMOVZ-->
+                <tr>
+                  <td>cmove / cmovz</td>
+                  <td>cmove eax, rax / cmovz eax, rax</td>
+                  <td>eax = rax if equal / eax = rax if 0</td>
+                </tr>
+                <!--CMOVENE / CMOVNZ-->
+                <tr>
+                  <td>cmovne / cmovnz</td>
+                  <td>cmovne eax, rax / cmovnz eax, rax</td>
+                  <td>eax = rax if not equal / eax = rax if not 0</td>
                 </tr>
                 <!--ADD-->
                 <tr>
@@ -271,6 +485,48 @@
                     <td>not</td>
                     <td>not eax</td>
                     <td>eax = ~(eax), Logical not on eax, stored in eax</td>
+                </tr>
+                <!--LEA-->
+                <tr>
+                    <td>lea</td>
+                    <td>lea eax, [ebx+8]</td>
+                    <td>eax = [ebx+8], Load Effect Address</td>
+                </tr>
+                <!--POP-->
+                <tr>
+                    <td>pop</td>
+                    <td>pop eax</td>
+                    <td>eax = (value that was on top of the stack)</td>
+                </tr>
+                <!--PUSH-->
+                <tr>
+                    <td>push</td>
+                    <td>push 0x16</td>
+                    <td>The top of the stack now equals 0x16</td>
+                </tr>
+                <!--RET-->
+                <tr>
+                    <td>ret</td>
+                    <td>ret</td>
+                    <td>pops the return address off of the stack and returns control to that location</td>
+                </tr>
+                <!--SAL-->
+                <tr>
+                    <td>sal</td>
+                    <td>sal eax, 4</td>
+                    <td>eax = eax*(2^4), shifts left 4 binary places</td>
+                </tr>
+                <!--SAR-->
+                <tr>
+                    <td>sar</td>
+                    <td>sar eax, 4</td>
+                    <td>eax = eax/(2^4), shifts right 4 binary places</td>
+                </tr>
+                <!--TEST-->
+                <tr>
+                    <td>test</td>
+                    <td>test eax, rax</td>
+                    <td>In a special address used by jmp and other command eax & rax is stored</td>
                 </tr>
               </table>
         </div>

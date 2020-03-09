@@ -206,6 +206,8 @@
             <label><b>Input Assembly</b></label>
             <div>
 <textarea id="inputAssembly" style="width:500px; height:300px;" type="text" spellcheck="false">mov ebx, 110
+movl ebx, 110
+MOV ebx, 110
 mov ebx 110
 mov hello, 200
 add eax, 200
@@ -216,6 +218,27 @@ and eax, ecx
 or eax, ecx
 xor eax, ecx
 not eax
+jmp .section_two
+cmp eax, rax
+je .section_two
+jz .section_two
+jne .section_two
+jnz .section_two
+js .section_two
+js .section_two
+jns .section_two
+jg .section_two
+jnle .section_two
+jge .section_two
+jnl .section_two
+jl .section_two
+jnge .section_two
+jle .section_two
+jng .section_two
+cmove .section_two
+cmovz .section_two
+cmovne .section_two
+cmovnz .section_two
 blahblah eax
 </textarea>
             </div>
@@ -395,29 +418,182 @@ blahblah eax
                     case "mov":
                         newText = newText + mov(line, segments);
                         break;
+                    case "movq":
+                        newText = newText + mov(line, segments);
+                        break;
+                    case "movl":
+                        newText = newText + mov(line, segments);
+                        break;
+                    case "MOV":
+                        newText = newText + mov(line, segments);
+                        break;
+                    case "MOVQ":
+                        newText = newText + mov(line, segments);
+                        break;
+                    case "MOVL":
+                        newText = newText + mov(line, segments);
+                        break;
                     case "add":
+                        newText = newText + add(line, segments);
+                        break;
+                    case "ADD":
                         newText = newText + add(line, segments);
                         break;
                     case "sub":
                         newText = newText + sub(line, segments);
                         break;
+                    case "SUB":
+                        newText = newText + sub(line, segments);
+                        break;
                     case "inc":
+                        newText = newText + inc(line, segments);
+                        break;
+                    case "INC":
                         newText = newText + inc(line, segments);
                         break;
                     case "dec":
                         newText = newText + dec(line, segments);
                         break;
+                    case "DEC":
+                        newText = newText + dec(line, segments);
+                        break;
                     case "and":
+                        newText = newText + and(line, segments);
+                        break;
+                    case "AND":
                         newText = newText + and(line, segments);
                         break;
                     case "or":
                         newText = newText + or(line, segments);
                         break;
+                    case "OR":
+                        newText = newText + or(line, segments);
+                        break;
                     case "xor":
+                        newText = newText + xor(line, segments);
+                        break;
+                    case "XOR":
                         newText = newText + xor(line, segments);
                         break;
                     case "not":
                         newText = newText + not(line, segments);
+                        break;
+                    case "NOT":
+                        newText = newText + not(line, segments);
+                        break;
+                    case "cmp":
+                        newText = newText + cmp(line, segments);
+                        break;
+                    case "CMP":
+                        newText = newText + cmp(line, segments);
+                        break;
+                    case "jmp":
+                        newText = newText + jmp(line, segments);
+                        break;
+                    case "JMP":
+                        newText = newText + jmp(line, segments);
+                        break;
+                    case "je":
+                        newText = newText + je(line, segments);
+                        break;
+                    case "JE":
+                        newText = newText + JE(line, segments);
+                        break;
+                    case "jz":
+                        newText = newText + jz(line, segments);
+                        break;
+                    case "JZ":
+                        newText = newText + JZ(line, segments);
+                        break;
+                    case "jne":
+                        newText = newText + jne(line, segments);
+                        break;
+                    case "JNE":
+                        newText = newText + jne(line, segments);
+                        break;
+                    case "js":
+                        newText = newText + js(line, segments);
+                        break;
+                    case "JS":
+                        newText = newText + js(line, segments);
+                        break;
+                    case "jns":
+                        newText = newText + jns(line, segments);
+                        break;
+                    case "JNS":
+                        newText = newText + jns(line, segments);
+                        break;
+                    case "jg":
+                        newText = newText + jg(line, segments);
+                        break;
+                    case "JG":
+                        newText = newText + jg(line, segments);
+                        break;
+                    case "jnle":
+                        newText = newText + jnle(line, segments);
+                        break;
+                    case "JNLE":
+                        newText = newText + jnle(line, segments);
+                        break;
+                    case "jge":
+                        newText = newText + jge(line, segments);
+                        break;
+                    case "JGE":
+                        newText = newText + jge(line, segments);
+                        break;
+                    case "jnl":
+                        newText = newText + jnl(line, segments);
+                        break;
+                    case "JNL":
+                        newText = newText + jnl(line, segments);
+                        break;
+                    case "jl":
+                        newText = newText + jl(line, segments);
+                        break;
+                    case "JL":
+                        newText = newText + jl(line, segments);
+                        break;
+                    case "jnge":
+                        newText = newText + jnge(line, segments);
+                        break;
+                    case "JNGE":
+                        newText = newText + jnge(line, segments);
+                        break;
+                    case "jle":
+                        newText = newText + jle(line, segments);
+                        break;
+                    case "JLE":
+                        newText = newText + jle(line, segments);
+                        break;
+                    case "jng":
+                        newText = newText + jng(line, segments);
+                        break;
+                    case "JNG":
+                        newText = newText + jng(line, segments);
+                        break;
+                    case "cmove":
+                        newText = newText + cmove(line, segments);
+                        break;
+                    case "CMOVE":
+                        newText = newText + cmove(line, segments);
+                        break;
+                    case "cmovz":
+                        newText = newText + cmovz(line, segments);
+                        break;
+                    case "CMOVEZ":
+                        newText = newText + cmovz(line, segments);
+                        break;
+                    case "cmovne":
+                        newText = newText + cmovne(line, segments);
+                        break;
+                    case "CMOVNE":
+                        newText = newText + cmovne(line, segments);
+                        break;
+                    case "cmovnz":
+                        newText = newText + cmovnz(line, segments);
+                        break;
+                    case "CMOVNZ":
+                        newText = newText + cmovnz(line, segments);
                         break;
                     case "":
                         break;
