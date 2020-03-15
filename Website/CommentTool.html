@@ -185,8 +185,6 @@
                     <a class="nav-link" href="/index.html">Home</a>
                     <a class="nav-link" href="/Information.html">Information</a>
                     <a class="nav-link" href="/CommentTool.html">Comment Tool</a>
-                    <a class="nav-link" href="/StackTracker.html">Stack Tracker</a>
-                    <a class="nav-link" href="/Practice.html">Practice</a>
                 </div>
             </div>
 
@@ -224,7 +222,6 @@ je .section_two
 jz .section_two
 jne .section_two
 jnz .section_two
-js .section_two
 js .section_two
 jns .section_two
 jg .section_two
@@ -283,14 +280,6 @@ blahblah eax
                         <li></li>
                         <li>
                             <a href="/CommentTool.html" style="font-size:14px">Comment Tool</a>
-                        </li>
-                        <li></li>
-                        <li>
-                            <a href="/StackTracker.html" style="font-size:14px">Stack Tracker</a>
-                        </li>
-                        <li></li>
-                        <li>
-                            <a href="/Practice.html" style="font-size:14px">Practice</a>
                         </li>
                         <li></li>
                     </ul>
@@ -510,6 +499,12 @@ blahblah eax
                         break;
                     case "JNE":
                         newText = newText + jne(line, segments);
+                        break;
+                    case "jnz":
+                        newText = newText + jnz(line, segments);
+                        break;
+                    case "JNZ":
+                        newText = newText + jnz(line, segments);
                         break;
                     case "js":
                         newText = newText + js(line, segments);
@@ -794,6 +789,306 @@ blahblah eax
 
                 //Success
                 return line + "; " + destination + " = ~" + destination + "\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a jmp instruction to add a comment on to the end of it
+        function jmp(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Start reading code from " + destination + "\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a cmp instruction to add a comment on to the end of it
+        function cmp(line, segments){
+            if(segments.length == 3){
+                var destination = "";
+                var source = segments[1];
+                destination = segments[2];
+
+                //Success
+                return line + "; RESULT = " + destination + " - " + source + "\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a je instruction to add a comment on to the end of it
+        function je(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if equal\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a jz instruction to add a comment on to the end of it
+        function jz(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if equal to 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jne instruction to add a comment on to the end of it
+        function jne(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if not equal\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jnz instruction to add a comment on to the end of it
+        function jnz(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if not equal to 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a js instruction to add a comment on to the end of it
+        function js(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if less than 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jns instruction to add a comment on to the end of it
+        function jns(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if NOT less than 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jg instruction to add a comment on to the end of it
+        function jg(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if greater than 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jnle instruction to add a comment on to the end of it
+        function jnle(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if not greater than 0 and not equal to 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jge instruction to add a comment on to the end of it
+        function jge(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if greater than 0 or equal to 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jnl instruction to add a comment on to the end of it
+        function jnl(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if not less than 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jl instruction to add a comment on to the end of it
+        function jl(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if less than 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a jnge instruction to add a comment on to the end of it
+        function jnge(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if not greater than 0 and not equal to 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a jle instruction to add a comment on to the end of it
+        function jle(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if less than or equal to 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a jng instruction to add a comment on to the end of it
+        function jng(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; Jump to " + destination + " if not greater than 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a cmove instruction to add a comment on to the end of it
+        function cmove(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; src = destination if equal\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+        
+        //Parses a cmovz instruction to add a comment on to the end of it
+        function cmovz(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; src = destination if 0\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a cmovne instruction to add a comment on to the end of it
+        function cmovne(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; src = destination if not equal\n";
+                
+            }else{
+                return line + ";Unknown Instruction or Usage"
+            }
+        }
+
+        //Parses a cmovnz instruction to add a comment on to the end of it
+        function cmovnz(line, segments){
+            if(segments.length == 2){
+                var destination = "";
+                var source = segments[0];
+                destination = segments[1];
+
+                //Success
+                return line + "; src = destination if not 0\n";
                 
             }else{
                 return line + ";Unknown Instruction or Usage"
